@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
+  
   <header>
     <nav>
       <ul>
@@ -21,7 +21,7 @@
     </nav>
   </header>
 
-  <!-- About Section -->
+  
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -29,14 +29,14 @@
     </p>
   </section>
 
-  <!-- Profile & Pictures Section -->
+  
   <section id="profile">
     <h2>Profile &amp; Pictures</h2>
-    <!-- Profile Picture -->
+    
     <div class="profile-img">
       <img src="janya_whatsapp_profilepic.png" alt="My Profile Picture">
     </div>
-    <!-- Local Pictures Gallery -->
+    
     <div class="gallery">
       <img src="local_img_1.jpg" alt="Local Image 1">
       <img src="local_img_2.jpg" alt="Local Image 2">
@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <!-- Education Section -->
+  
   <section id="education">
     <h2>Education &amp; Achievements</h2>
     <p>
@@ -57,7 +57,7 @@
     </ul>
   </section>
 
- <!-- Technical Skills Section -->
+ 
 <section id="skills">
   <h2>Technical Skills</h2>
 
@@ -81,16 +81,16 @@
 </section>
 
 
-  <!-- CV Section -->
+  
   <section id="cv">
     <h2>My CV</h2>
     <p>You can download my CV by clicking on the link below:</p>
     <p class="cv-link">
-      <a href="Janya_Kaushal_Bhatt_Achievements.pdf" target="_blank">Download My CV (PDF)</a>
+      <a href="SAHIL_M_PATEL_RESUME_.pdf" target="_blank">Download My CV (PDF)</a>
     </p>
   </section>
 
-  <!-- New Text Analysis Section -->
+  
   <section id="analysis">
     <h2>Text Analysis</h2>
     <p>
@@ -102,12 +102,12 @@
     <div id="analysis-results" style="margin-top:20px; padding:10px; background:#f0f0f0; border-radius:5px;"></div>
   </section>
 
-  <!-- Footer -->
+  
   <footer>
     <p>&copy; 2025 Janya. All Rights Reserved.</p>
   </footer>
 
-  <!-- JavaScript for smooth scrolling -->
+  
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -132,13 +132,13 @@
       });
     }
   
-    // Initialize to show all skills by default
+    
     window.addEventListener("DOMContentLoaded", filterSkills);
   </script>
   
-  <!-- JavaScript to capture events -->
+  
   <script>
-    // Utility: Get simplified description of an element
+    
     function getElementDescription(element) {
       const tag = element.tagName.toLowerCase();
       switch(tag) {
@@ -153,29 +153,29 @@
       }
     }
 
-    // Log events with timestamp, event type, and element description
+    
     function logEvent(e, eventType) {
       const timestamp = new Date().toISOString();
       const elementDesc = getElementDescription(e.target);
       console.log(`${timestamp} , ${eventType} , ${elementDesc}`);
     }
 
-    // Capture all click events on the document
+    
     document.addEventListener("click", function(e) {
       logEvent(e, "click");
     });
 
-    // Capture page view
+    
     window.addEventListener("load", function(e) {
       const timestamp = new Date().toISOString();
       console.log(`${timestamp} , view , page`);
     });
   </script>
 
-  <!-- JavaScript for Text Analysis -->
- <!-- Replace your existing script section for Text Analysis with this updated one -->
+  
+ 
 <script>
-  // Define sets for token classification (all lower-case)
+  
   const pronouns = ["i", "me", "my", "mine", "you", "your", "yours", "he", "him", "his", "she", "her", "hers", "it", "its", "we", "us", "our", "ours", "they", "them", "their", "theirs"];
   const prepositions = ["about", "above", "across", "after", "against", "along", "among", "around", "at", "before", "behind", "below", "beneath", "beside", "between", "beyond", "by", "despite", "down", "during", "except", "for", "from", "in", "inside", "into", "like", "near", "of", "off", "on", "onto", "out", "over", "past", "since", "through", "throughout", "to", "toward", "under", "underneath", "until", "up", "upon", "with", "within", "without"];
   const articles = ["a", "an"];
@@ -189,18 +189,18 @@
     const wordsArr = tokenize(text);
     const words = wordsArr.length;
 
-    // Warn if less than 10,000 words
+    
     if (words < 10000) {
       alert("Warning: The text contains less than 10,000 words. The analysis will still proceed.");
     }
 
-    // Calculate basic counts
+    
     const letters = (text.match(/[a-zA-Z]/g) || []).length;
     const spaces = (text.match(/ /g) || []).length;
     const newlines = (text.match(/\n/g) || []).length;
     const specialSymbols = (text.match(/[^a-zA-Z0-9\s]/g) || []).length;
 
-    // Token counts for pronouns, prepositions, and articles
+    
     const pronounCounts = {};
     const prepositionCounts = {};
     const articleCounts = {};
